@@ -14,6 +14,6 @@ export class User {
   @Column()
   password: string;
 
-  @Column(({}) => RegistryDates, { prefix: false })
+  @Column(() => RegistryDates, { prefix: false })
   registryDates: RegistryDates;
 }

@@ -11,6 +11,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       port: 5444,
       database: 'conrod',
       autoLoadEntities: true,
+      synchronize: true,
     }),
   ],
 })
