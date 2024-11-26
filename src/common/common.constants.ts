@@ -8,3 +8,7 @@ export const VALIDATION_CONSTANTS: ValidationPipeOptions = {
     enableImplicitConversion: true,
   },
 };
+
+export const DEFAULT_PAGE_SIZE = {
+  USER: 10,
+} as const satisfies Record<string, number>;
