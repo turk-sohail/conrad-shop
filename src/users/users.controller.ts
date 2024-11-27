@@ -8,8 +8,8 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
-import { IdDto } from 'src/common/id.dto';
-import { PaginationDto } from 'src/common/pagination.dto';
+import { IdDto } from 'src/common/dtos/id.dto';
+import { PaginationDto } from 'src/common/dtos/pagination.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UsersService } from './users.service';
