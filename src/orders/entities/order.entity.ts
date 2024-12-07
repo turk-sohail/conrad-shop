@@ -5,10 +5,12 @@ import {
   Column,
   Entity,
   ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { OrderStatus } from '../enums/order-status.enum';
+import { OrderItem } from './order-item.entity';
 
 @Entity()
 export class Order {
@@ -28,4 +30,6 @@ export class Order {
 
   @OneToOne(() => Payment, (payment) => payment.order, { cascade: true })
   payment: Payment;
+  @OneToMany(() => OrderItem, (orderItem) => orderItem.order, { cascade: true })
+  items: OrderItem[];
 }
